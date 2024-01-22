@@ -1,7 +1,11 @@
 
 # Welcome to your CDK Python project!
 
-This is a blank project for CDK development with Python.
+This is a project for CDK development with Python.
+This project demonstrates how to use AWS CDK to create a serverless web application. 
+Specifically, this project creates 
+- a Lambda function
+- AWS API Gateway
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

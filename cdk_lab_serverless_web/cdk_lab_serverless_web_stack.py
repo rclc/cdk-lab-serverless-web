@@ -1,7 +1,8 @@
 from aws_cdk import (
     # Duration,
     Stack,
-    aws_lambda as _lambda
+    aws_lambda as _lambda,
+    aws_apigateway as apigw
     # aws_sqs as sqs,
 )
 from constructs import Construct
@@ -19,6 +20,11 @@ class CdkLabServerlessWebStack(Stack):
             code=_lambda.Code.from_asset('lambda'),
             handler='hello.handler'
             )
+
+        apigw.LambdaRestApi(
+            self, 'Endpoint',
+            handler=my_lambda
+        )
         
         # example resource
         # queue = sqs.Queue(
