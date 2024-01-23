@@ -6,6 +6,8 @@ This project demonstrates how to use AWS CDK to create a serverless web applicat
 Specifically, this project creates 
 - a Lambda function
 - AWS API Gateway
+- a HitCounter construct which creates a Dynamo DB table and a hitcount lambda function
+- a hitcount lambda function and its code
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

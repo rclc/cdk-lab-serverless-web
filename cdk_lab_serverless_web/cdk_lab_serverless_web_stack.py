@@ -5,7 +5,10 @@ from aws_cdk import (
     aws_apigateway as apigw
     # aws_sqs as sqs,
 )
+
 from constructs import Construct
+
+from .hitcounter import HitCounter
 
 class CdkLabServerlessWebStack(Stack):
 
@@ -21,9 +24,15 @@ class CdkLabServerlessWebStack(Stack):
             handler='hello.handler'
             )
 
+        #instantiate a hit counter
+        hello_with_counter = HitCounter(
+            self, 'HelloHitCounter',
+            downstream=my_lambda
+        )
+
         apigw.LambdaRestApi(
             self, 'Endpoint',
-            handler=my_lambda
+            handler=hello_with_counter.handler
         )
         
         # example resource
