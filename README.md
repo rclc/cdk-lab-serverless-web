@@ -8,6 +8,7 @@ Specifically, this project creates
 - AWS API Gateway
 - a HitCounter construct which creates a Dynamo DB table and a hitcount lambda function
 - a hitcount lambda function and its code
+- a DynamoDB table viewer
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

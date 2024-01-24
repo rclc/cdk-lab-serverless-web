@@ -39,6 +39,7 @@ class CdkLabServerlessWebStack(Stack):
         TableViewer(
             self, 'ViewHitCounter',
             title='Hello Hits',
+            sort_by='-hits',
             table=hello_with_counter.table
         )
         
